@@ -46,9 +46,9 @@ public class SearchListActivity extends AppCompatActivity {
                 // inside on query text change method we are
                 // calling a method to filter our recycler view.
                 filter(newText);
-                /*if (search.getQuery().length() == 0){
+                if (search.getQuery().length() == 0){
                     RV.setVisibility(View.INVISIBLE);
-                }*/
+                }
                 return false;
             }
         });
@@ -80,6 +80,7 @@ public class SearchListActivity extends AppCompatActivity {
             // at last we are passing that filtered
             // list to our adapter class.
             adapter.filterList(filteredlist);
+            RV.setVisibility(View.VISIBLE);
         }
     }
     private void buildRecyclerView() {
